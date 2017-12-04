@@ -1,26 +1,22 @@
 {
   "roles": {
-    "host": {
-      "inherits": "council",
+    "Head Administrator": {
+      "inherits": "Community Manager",
       "permissions": []
     },
-    "council": {
-      "inherits": "headcoder",
+    "Community Manager": {
+      "inherits": "Acting Head Maintainer",
       "permissions": []
     },
-    "headcoder": {
-      "inherits": "tribunal",
+    "Acting Head Maintainer": {
+      "inherits": "Senior Admin",
       "permissions": ["config"]
     },
-    "tribunal": {
+    "Senior Admin": {
       "inherits": "staff",
       "permissions": ["addao"]
     },
     "staff": {
-      "inherits": "retmin",
-      "permissions": []
-    },
-    "retmin": {
       "inherits": false,
       "permissions": ["tempban", "ban", "unban", "kick", "reboot", "ticket", "whitelist", "playerinfo", "kickself"]
     },
@@ -33,5 +29,5 @@
       "permissions": ["unsubscribe"]
     }
   },
-  "admins": ["115886044162949123"]
+  "admins": ["!228567805534928899", "!143189884822093824"]
 }
