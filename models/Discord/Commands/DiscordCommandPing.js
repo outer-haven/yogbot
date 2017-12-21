@@ -14,7 +14,7 @@ class DiscordCommandPing extends DiscordCommand {
       if('error' in results) {
         message.reply(results.error);
       } else {
-        message.reply("There are **" + results.data + "** players online, join them now with " + config.server_join_address);
+        message.reply("There are **" + results.data + "** players online, join them now by pasting **" + config.server_join_address + "** into your browser.");
       }
     });
   }
