@@ -14,15 +14,14 @@ class DiscordCommandInfo extends DiscordCommand {
 		var byondSS = this.subsystem.manager.getSubsystem("Byond Connector");
 		var discord = this.subsystem.manager.getSubsystem("Discord").discord;
 
-		byondSS.byondConnector.request("?adminwho", (resultsadmin) => {
+		byondSS.byondConnector.request("?adminwho&key=" + config.server_key, (resultsadmin) => {
 			if ('error' in resultsadmin) {
 				return message.reply(resultsadmin.error);
 			}
-
+			
 			var adminwho = resultsadmin.data;
 			adminwho = adminwho.split(":")[1];
-			adminwho = StringUtils.replaceAll(adminwho, "\t", "");
-			adminwho = StringUtils.replaceAll(adminwho, "\0", "");
+			
 			byondSS.byondConnector.request("?ping", (results) => {
 				if ('error' in results) {
 					return message.reply(results.error);
