@@ -45,7 +45,7 @@ class DiscordCommandInfo extends DiscordCommand {
 
 					var embed = new Discord.RichEmbed();
 
-					embed.setAuthor("Information", "http://i.imgur.com/GPZgtbe.png");
+					embed.setAuthor("Information", "https://i.imgur.com/BPonWb8.png");
 					embed.setDescription("Join the server now by pasting **" + config.server_join_address + "** into your browser.");
 					embed.addField("Players online:", results.data, true);
 					embed.addField("Current round:", byondSS.roundNumber, true);
